@@ -11,15 +11,13 @@ public class HUD : MonoBehaviour
     public Text scoreUI;
     public Text fillPercentage;
     public Image castingProgress;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         scoreUI.text = "Score: 0";
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
     void Update()
     {
         

@@ -12,20 +12,15 @@ public class FirstPersonCameraController : MonoBehaviour
     public Transform pivot;
     public Transform targetBody;
     private Vector3 offset;
-    private string cameraType="thirdPerson";
+    private string cameraType="thirdPerson";  
     
-
-    // Start is called before the first frame update
     void Start()
     {
         offset = thirdPersonOffset;
-        pivot.transform.position = target.position;
-        //pivot.transform.parent = target;
-        Debug.Log(transform.position - target.position);
+        pivot.transform.position = target.position;        
         pivot.transform.parent = null;
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
         if (!GameManager.paused)

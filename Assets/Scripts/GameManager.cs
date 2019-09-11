@@ -18,11 +18,10 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator pickUpCoroutine;
     private float gettingProcessTime;
-    private float countdown;
-    
+    private float countdown;    
 
     private int score;
-    // Start is called before the first frame update
+    
     void Start()
     {
         paused = false;
@@ -32,7 +31,6 @@ public class GameManager : MonoBehaviour
         countdown = gameTime;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!paused)
@@ -63,8 +61,7 @@ public class GameManager : MonoBehaviour
     private void handleInput()
     {             
         if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            Debug.Log("LS pressed");
+        {            
             Collider[] foundColliders = Physics.OverlapSphere(player.transform.position, collectionRadius);
             int i = 0;
             while (i < foundColliders.Length)

@@ -15,14 +15,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveDirection;
     private string movementType = "thirdPerson";
     private Vector3 oldPosition;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         controller = GetComponent<CharacterController>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (!GameManager.paused)

@@ -26,12 +26,10 @@ public class Objective : MonoBehaviour
         reverse = false;
         moveSpeed = Random.Range(0.5f, 2f);
     }
-
     void Update()
     {
         handleMovement();
     }
-
     private void handleMovement()
     {
         float step = moveSpeed * Time.deltaTime;
