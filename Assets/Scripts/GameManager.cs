@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     {
         paused = false;
         score = 0;
+        ui.setScore(score);
         gettingProcessTime = 0;
         castingBar.SetActive(false);
         countdown = gameTime;

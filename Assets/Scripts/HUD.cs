@@ -13,8 +13,7 @@ public class HUD : MonoBehaviour
     public Image castingProgress;
     
     void Start()
-    {
-        scoreUI.text = "Score: 0";
+    {        
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -25,12 +24,12 @@ public class HUD : MonoBehaviour
 
     public void setTimer(float time)
     {
-        timerUI.text = "Timer: " + Mathf.RoundToInt(time).ToString();
+        timerUI.text = TextConstants.TIMER + Mathf.RoundToInt(time).ToString();
     }
 
     public void setScore(int score)
     {
-        scoreUI.text = "Score: " + score.ToString();
+        scoreUI.text = TextConstants.SCORE + score.ToString();
     }
 
     public void setGameOver(bool won)
@@ -39,11 +38,11 @@ public class HUD : MonoBehaviour
         if (won)
         {
             Cursor.lockState = CursorLockMode.None;
-            gameOverText.text = "You won!";
+            gameOverText.text = TextConstants.VICTORY;
         } else
         {
             Cursor.lockState = CursorLockMode.None;
-            gameOverText.text = "You lose";
+            gameOverText.text = TextConstants.GAMEOVER;
         }
     }
 
